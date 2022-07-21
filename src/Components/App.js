@@ -1,10 +1,11 @@
 import LandingPage from "./LandingPage";
-
+import RecallPage from "./RecallPage";
 
 export default function App() {
     return (
-        <div>
-            <LandingPage />
-        </div>
+        <>
+            {/* <LandingPage /> */}
+            <RecallPage />
+        </>
     ); 
 }
