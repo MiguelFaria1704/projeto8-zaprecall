@@ -1,7 +1,10 @@
+import logo from "./logo.png";
+import "./style.css"
+
 export default function LandingPage() {
     return (
         <div className="landing-page">
-            <img src="assets/logo.png" alt="Logo ZapRecall"/>
+            <img src={logo} alt="Logo ZapRecall"/>
             <h1>ZapRecall</h1>
             <input type="button" value="Iniciar Recall!"></input>
         </div>

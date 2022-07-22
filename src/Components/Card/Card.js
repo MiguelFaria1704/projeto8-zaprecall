@@ -1,4 +1,6 @@
 import React from "react";
+import "./style.css"
+import setinha from "./setinha.png"
 
 export default function Card({
     number,
@@ -44,7 +46,7 @@ export default function Card({
             {state === "displayed" && (
                 <div>
                     <p>{question}</p>
-                    <img src="assets/setinha.png" alt="Virar carta" onClick={() => flipCard("answered")}/>
+                    <img src={setinha} alt="Virar carta" onClick={() => flipCard("answered")}/>
                 </div>
             )}
             {state === "answered" && (

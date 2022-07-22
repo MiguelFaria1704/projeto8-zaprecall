@@ -1,0 +1,61 @@
+.status-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 70px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.results {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.results ion-icon {
+    font-size: 23px;
+    margin: 0 2.5px;
+}
+
+.final-message {
+    width: 222px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.final-message p {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.final-message div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.right h5 {
+    color: #2FBE34;
+}
+
+.doubt h5 {
+    color: #FF922E;
+}
+
+.wrong h5 {
+    color: #FF3030;
+}
+
+.final-message img {
+    width: 23px;
+    height: 23px;
+    margin: 15px;
+}

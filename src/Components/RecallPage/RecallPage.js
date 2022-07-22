@@ -1,45 +1,25 @@
 import React from "react";
-import Deck from "./Deck";
-import StatusBar from "./StatusBar";
+import Deck from "../Deck/Deck";
+import StatusBar from "../StatusBar/StatusBar";
+import logo from "./logo.png";
+import "./style.css";
 
 export default function RecallPage() {
     const [cont, setCont] = React.useState(0);
     const [iconName, setIconName] = React.useState([]);
     const [results, setResults] = React.useState([]);
-    const [message, setMessage] = React.useState({emoji: "", reaction: "", msg: ""});
     const [score, setScore] = React.useState(0);
 
     function countResult() {
         setCont(cont + 1);
         setResults([...results, iconName]);
-
-        if(cont === 3) {
-            showFinalMessage(results);
-        }
     }
 
-    function showFinalMessage(results) {
-        console.log(score);
-
-        if(score === 0) {
-            setMessage({
-                emoji: "🥳",
-                reaction: "Parabéns!",
-                msg: "Você não esqueceu de nenhum flashcard!"
-            });
-        } else {
-            setMessage({
-                emoji: "😥",
-                reaction: "Putz...",
-                msg: "Ainda faltam alguns... Mas não desanime!"
-            });
-        }
-    }
 
     return (
         <div className="recall-page">
             <div className="top">
-                <img src="assets/logo.png" alt="Logo ZapRecall"/>
+                <img src={logo} alt="Logo ZapRecall"/>
                 <h1>ZapRecall</h1>
             </div>
             <Deck 
@@ -53,7 +33,7 @@ export default function RecallPage() {
                 cont={cont}
                 iconName={iconName}
                 results={results}
-                message={message}
+                score={score}
                 />
         </div>
     );

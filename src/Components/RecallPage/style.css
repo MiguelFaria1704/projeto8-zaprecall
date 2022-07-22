@@ -1,0 +1,24 @@
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 42px 0 51px 0;
+    width: 255px;
+}
+
+.top img {
+    width: 52px;
+    height: 60px;
+}
+
+ion-icon[name="checkmark-circle-sharp"]{
+    color: #2FBE34;
+}
+
+ion-icon[name="help-circle-sharp"]{
+    color: #FF922E;
+}
+
+ion-icon[name="close-circle-sharp"]{
+    color: #FF3030;
+}
