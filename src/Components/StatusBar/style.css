@@ -59,3 +59,20 @@
     height: 23px;
     margin: 15px;
 }
+
+.status-bar > div:last-child {
+    background-color: #FB6B6B;
+    border-radius: 5px;
+    width: 167px;
+    height: auto;
+    margin: 20px 0;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.status-bar > div:last-child p {
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+
+}

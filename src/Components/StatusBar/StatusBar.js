@@ -7,8 +7,11 @@ export default function StatusBar({
     cont, 
     iconName,
     results,
-    score
-}) {   
+    score,
+    togglePage,
+    onScreen
+}) {
+    const [display, setDisplay] = React.useState("none");   
 
     return (
         <div className="status-bar">
@@ -16,6 +19,7 @@ export default function StatusBar({
                 cont={cont}
                 results={results}
                 score={score}
+                setDisplay={setDisplay}
                 />
 
             <p>{cont}/4 CONCLUÍDOS</p>
@@ -24,6 +28,8 @@ export default function StatusBar({
                 iconName={iconName}
                 results={results}
             />
+
+            <div className={display} onClick={() => togglePage(onScreen)}><p>REINICIAR RECALL</p></div>
         </div>
     );
 }
@@ -54,7 +60,8 @@ function Results({
 function FinalMessage({
     cont, 
     results,
-    score
+    score,
+    setDisplay
 }) {
     let message = {emoji: "", reaction: "", msg: ""};
 
@@ -64,18 +71,19 @@ function FinalMessage({
                 emoji: "PartyEmoji",
                 reaction: "Parabéns!",
                 msg: "Você não esqueceu de nenhum flashcard!"
-            };
+            }
         } else {
             message = {
                 emoji: "SadEmoji",
                 reaction: "Putz...",
                 msg: "Ainda faltam alguns... Mas não desanime!"
-            };
+            }
         }
     }
 
     if(cont === 4) {
         showFinalMessage(results);
+        setDisplay("");
     }
 
     return (
@@ -87,7 +95,7 @@ function FinalMessage({
                 ) : (
                     <img src={SadEmoji} alt="emoji" />
             )}
-                <p>{message.reaction}</p>
+                <p><strong>{message.reaction}</strong></p>
             </div>
             )}
             <p>{message.msg}</p>

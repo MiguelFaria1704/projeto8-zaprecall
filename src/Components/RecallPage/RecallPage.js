@@ -4,11 +4,15 @@ import StatusBar from "../StatusBar/StatusBar";
 import logo from "./logo.png";
 import "./style.css";
 
-export default function RecallPage({deck}) {
+export default function RecallPage({
+    deck,
+    togglePage,
+    onScreen
+}) {
     const [cont, setCont] = React.useState(0);
     const [iconName, setIconName] = React.useState([]);
     const [results, setResults] = React.useState([]);
-    let [score, setScore] = React.useState(0);
+    const [score, setScore] = React.useState(0);
 
     function countResult() {
         setCont(cont + 1);
@@ -34,6 +38,8 @@ export default function RecallPage({deck}) {
                 iconName={iconName}
                 results={results}
                 score={score}
+                togglePage={togglePage}
+                onScreen={onScreen}
                 />
         </div>
     );

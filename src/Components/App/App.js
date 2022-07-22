@@ -11,12 +11,12 @@ export default function App() {
         return Math.random() - 0.5; 
     }
 
-    function TogglePage(onScreen) {
+    function togglePage(onScreen) {
         if(onScreen === "LandingPage") {
             setOnScreen("RecallPage");
             deck.sort(compare);
         } else {
-            setOnScreen("RecallPage");  
+            setOnScreen("LandingPage");  
         }        
     }
 
@@ -25,10 +25,14 @@ export default function App() {
             {onScreen === "LandingPage" ? (
                 <LandingPage 
                     onScreen={onScreen}
-                    TogglePage={TogglePage}
+                    togglePage={togglePage}
                     />
                 ) : (
-                <RecallPage deck={deck} />
+                <RecallPage
+                    deck={deck}
+                    togglePage={togglePage}
+                    onScreen={onScreen}
+                />
                 )
             }
         </>

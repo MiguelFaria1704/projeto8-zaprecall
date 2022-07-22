@@ -3,13 +3,13 @@ import "./style.css"
 
 export default function LandingPage({
     onScreen,
-    TogglePage
+    togglePage
 }) {   
     return (
         <div className="landing-page">
             <img src={logo} alt="Logo ZapRecall"/>
             <h1>ZapRecall</h1>
-            <input type="button" value="Iniciar Recall!" onClick={() => TogglePage(onScreen)}></input>
+            <input type="button" value="Iniciar Recall!" onClick={() => togglePage(onScreen)}></input>
         </div>
     );
 }

@@ -10,9 +10,8 @@ export default function Card({
     iconName,
     setIconName,
     score,
-    setScore
+    setScore,
 }) {
-
     const[state, setState] = React.useState("hidden");
 
     function flipCard(nextState) {
