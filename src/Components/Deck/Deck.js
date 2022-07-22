@@ -6,7 +6,8 @@ export default function Deck({
     iconName,
     setIconName,
     score,
-    setScore
+    setScore,
+    deck
 }) {
 
     return (
@@ -27,24 +28,3 @@ export default function Deck({
         </div>
     );
 }
-
-const deck = [
-    {
-        question: "O que é JSX?",
-        answer: "Uma extensão de linguagem do JavaScript",
-    },
-    {
-        question: "Usamos estado (state) para __",
-        answer: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente.",
-    },
-    {
-        question: "O ReactDOM nos ajuda __ ",
-        answer: "interagindo com a DOM para colocar componentes React na.",
-    },
-    {
-        question: "Usamos props para __",
-        answer: "passar diferentes informações para componentes.",
-    },
-];
-
-

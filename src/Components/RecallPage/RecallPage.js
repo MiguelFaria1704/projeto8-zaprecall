@@ -4,17 +4,16 @@ import StatusBar from "../StatusBar/StatusBar";
 import logo from "./logo.png";
 import "./style.css";
 
-export default function RecallPage() {
+export default function RecallPage({deck}) {
     const [cont, setCont] = React.useState(0);
     const [iconName, setIconName] = React.useState([]);
     const [results, setResults] = React.useState([]);
-    const [score, setScore] = React.useState(0);
+    let [score, setScore] = React.useState(0);
 
     function countResult() {
         setCont(cont + 1);
         setResults([...results, iconName]);
     }
-
 
     return (
         <div className="recall-page">
@@ -28,6 +27,7 @@ export default function RecallPage() {
                 setIconName={setIconName}
                 score={score}
                 setScore={setScore}
+                deck={deck}
                 />
             <StatusBar 
                 cont={cont}
