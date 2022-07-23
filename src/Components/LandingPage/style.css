@@ -18,11 +18,12 @@ form {
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
-    height: 112px;
+    height: 170px;
     
 }
 
-.landing-page input {
+input,
+select {
     width: 246px;
     border-radius: 5px;
     font-family: 'Recursive', sans-serif;
@@ -30,13 +31,18 @@ form {
     background-color: #FFFFFF;
 }
 
-.landing-page input:first-child {
+input:nth-child(2),
+select {
     height: 43px;
     font-size: 14px;
     border: none;
     cursor: text;
     padding: 10px;
     color: #ADADAD;
+}
+
+select {
+    cursor: auto;
 }
 
 .landing-page input:last-child {

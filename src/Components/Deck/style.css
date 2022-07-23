@@ -1,6 +1,7 @@
 .deck {
     width: 80%;
     min-width: 280px;
+    margin-bottom: 100px;
 }
 
 .deck ion-icon {

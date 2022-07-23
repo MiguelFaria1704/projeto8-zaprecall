@@ -5,7 +5,8 @@ import "./style.css"
 export default function LandingPage({
     onScreen,
     togglePage,
-    setGoal
+    setGoal,
+    setDeckIndex
 }) {  
     return (
         <div className="landing-page">
@@ -15,6 +16,7 @@ export default function LandingPage({
                 onScreen={onScreen}
                 togglePage={togglePage}
                 setGoal={setGoal}
+                setDeckIndex={setDeckIndex}
             />
         </div>
     );
@@ -23,9 +25,13 @@ export default function LandingPage({
 function Form({
     onScreen,
     togglePage,
-    setGoal
+    setGoal,
+    setDeckIndex
 }) {
     
+    function handleDeck(event) {
+        setDeckIndex(event.target.value);
+    }
 
     function handleGoal(event) {
         setGoal(event.target.value);
@@ -38,6 +44,10 @@ function Form({
 
     return (
         <form onSubmit={handleSubmit}>
+            <select onChange={handleDeck}> 
+                <option value="0">React</option>
+                <option value="1">HoF</option>
+            </select>
             <input type="text" name="goal" placeholder="Digite sua meta de zaps..." onChange={handleGoal}></input>
             <input type="submit" value="Iniciar Recall!"></input>
         </form>

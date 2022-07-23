@@ -8,7 +8,8 @@ export default function RecallPage({
     deck,
     togglePage,
     onScreen,
-    goal
+    goal,
+    numCards
 }) {
     const [cont, setCont] = React.useState(0);
     const [iconName, setIconName] = React.useState([]);
@@ -42,6 +43,7 @@ export default function RecallPage({
                 togglePage={togglePage}
                 onScreen={onScreen}
                 goal={goal}
+                numCards={numCards}
                 />
         </div>
     );
