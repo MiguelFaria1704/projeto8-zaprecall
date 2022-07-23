@@ -44,11 +44,12 @@ function Form({
 
     return (
         <form onSubmit={handleSubmit}>
-            <select onChange={handleDeck}> 
+            <select onChange={handleDeck} required> 
+                <option value="Escolha seu deck" selected disabled>Escolha seu deck</option>
                 <option value="0">React</option>
                 <option value="1">HoF</option>
             </select>
-            <input type="text" name="goal" placeholder="Digite sua meta de zaps..." onChange={handleGoal}></input>
+            <input type="text" name="goal" placeholder="Digite sua meta de zaps..." onChange={handleGoal} required></input>
             <input type="submit" value="Iniciar Recall!"></input>
         </form>
     );

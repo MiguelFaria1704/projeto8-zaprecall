@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 148px 0 202px 0;
-    height: 375px;
+    height: 433px;
 }
 
 .landing-page img {
@@ -36,9 +36,12 @@ select {
     height: 43px;
     font-size: 14px;
     border: none;
-    cursor: text;
     padding: 10px;
     color: #ADADAD;
+}
+
+input:nth-child(2)::placeholder {
+    color: #ADADAD
 }
 
 select {
