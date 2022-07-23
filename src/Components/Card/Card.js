@@ -21,13 +21,13 @@ export default function Card({
     function markResult(result) {
         if(result === "right") {
             setIconName([...iconName, "checkmark-circle-sharp"]);
+            setScore(score + 1);
         }
         if(result === "doubt") {
             setIconName([...iconName, "help-circle-sharp"]);
         }
         if(result === "wrong") {
             setIconName([...iconName, "close-circle-sharp"]);
-            setScore(score - 1);
         }
 
         flipCard(result);

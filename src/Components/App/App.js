@@ -6,6 +6,7 @@ import "./style.css";
 
 export default function App() {
     const [onScreen, setOnScreen] = React.useState("LandingPage"); 
+    const [goal, setGoal] = React.useState(0);
 
     function compare() { 
         return Math.random() - 0.5; 
@@ -26,12 +27,14 @@ export default function App() {
                 <LandingPage 
                     onScreen={onScreen}
                     togglePage={togglePage}
+                    setGoal={setGoal}
                     />
                 ) : (
                 <RecallPage
                     deck={deck}
                     togglePage={togglePage}
                     onScreen={onScreen}
+                    goal={goal}
                 />
                 )
             }

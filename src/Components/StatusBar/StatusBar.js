@@ -9,7 +9,8 @@ export default function StatusBar({
     results,
     score,
     togglePage,
-    onScreen
+    onScreen,
+    goal
 }) {
     const [display, setDisplay] = React.useState("none");   
 
@@ -20,6 +21,7 @@ export default function StatusBar({
                 results={results}
                 score={score}
                 setDisplay={setDisplay}
+                goal={goal}
                 />
 
             <p>{cont}/4 CONCLUÍDOS</p>
@@ -61,12 +63,13 @@ function FinalMessage({
     cont, 
     results,
     score,
-    setDisplay
+    setDisplay,
+    goal
 }) {
     let message = {emoji: "", reaction: "", msg: ""};
 
     function showFinalMessage(results) {
-        if(score === 0) {
+        if(score >= goal) {
             message = {
                 emoji: "PartyEmoji",
                 reaction: "Parabéns!",
