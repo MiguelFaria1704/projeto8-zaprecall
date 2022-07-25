@@ -76,3 +76,14 @@
     text-align: center;
 
 }
+
+
+@media (min-width: 600px) {
+    .status-bar {
+        min-height: 118px;
+    }
+
+    .final-message {
+        width: 350px;
+    }
+}

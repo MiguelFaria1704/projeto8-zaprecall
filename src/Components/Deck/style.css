@@ -7,3 +7,13 @@
 .deck ion-icon {
     font-size: 28px;
 }
+
+@media (min-width: 600px) {
+    .deck {
+        margin-bottom: 200px;
+    }
+    
+    .deck ion-icon {
+        font-size: 36px;
+    }
+}

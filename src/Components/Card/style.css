@@ -82,3 +82,15 @@
 .doubt-button {
     background-color: #FF922E;
 }
+
+@media (min-width: 600px) {
+    .displayed > div,
+    .answered > div,
+    .hidden > div, 
+    .right > div,
+    .doubt > div,
+    .wrong > div {
+        min-height: 90px;
+        margin-bottom: 16px;
+    }
+}

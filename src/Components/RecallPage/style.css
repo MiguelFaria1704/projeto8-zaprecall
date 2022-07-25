@@ -22,3 +22,17 @@ ion-icon[name="help-circle-sharp"]{
 ion-icon[name="close-circle-sharp"]{
     color: #FF3030;
 }
+
+@media (min-width: 600px) {
+    .top {
+        width: 510px;
+        justify-content: left;
+        margin-bottom: 110px;
+    }
+
+    .top img {
+        width: 90px;
+        height: 100px;
+        margin-right: 50px;
+    }
+}

@@ -44,8 +44,8 @@ function Form({
 
     return (
         <form onSubmit={handleSubmit}>
-            <select onChange={handleDeck} required> 
-                <option value="Escolha seu deck" selected disabled>Escolha seu deck</option>
+            <select onChange={handleDeck} required defaultValue="DEFAULT"> 
+                <option value="DEFAULT" disabled>Escolha seu deck</option>
                 <option value="0">React</option>
                 <option value="1">HoF</option>
             </select>
